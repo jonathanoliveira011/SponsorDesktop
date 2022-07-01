@@ -90,9 +90,12 @@ namespace DataBase
                 MySqlCommand mysqlcommand = new MySqlCommand(queryString, conexao);
                 MySqlCommand mysqlcommand3 = new MySqlCommand(queryString3, conexao);
                 mysqlcommand.Connection.Open();
+                //Deleta o usuário
                 mysqlcommand2.ExecuteNonQuery();
-                mysqlcommand.ExecuteNonQuery();
+                //Deleta os eventos
                 mysqlcommand3.ExecuteNonQuery();
+                //Deleta a empresa
+                mysqlcommand.ExecuteNonQuery();
                 
             }
 
